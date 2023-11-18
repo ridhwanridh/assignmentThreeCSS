@@ -1,0 +1,206 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #d4a078, #9c6443);
+	font-family: 'Roboto', sans-serif; 
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    text-align: center; 
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+h2 {
+    font-family: 'Didot', serif;
+}
+
+.candy-info {
+    margin-bottom: 40px;
+    position: relative; 
+}
+
+.candy-info img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; 
+    height: auto; 
+    transition: transform 0.3s ease-in-out; 
+    z-index: 1; 
+}
+
+.candy-info .text-overlay {
+	
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: #3e2723;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+	width: 80%; 
+    max-width: 300px; 
+    padding: 20px; 
+	mix-blend-mode: difference;
+}
+
+.candy-info:hover .text-overlay {
+    opacity: 1;
+}
+
+.candy-info:hover img {
+    transform: scale(1.1);
+    z-index: 0; 
+}
+.candy-info h2,
+.candy-info p {
+    position: relative;
+    z-index: 1; 
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+.fact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.fact-icon {
+    width: 25px;
+    height: 25px;
+    background-color: #ffc107;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.nutrition-info {
+    margin-top: 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    border: 4px solid #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.company-info {
+    margin-top: 20px;
+}
+
+.company-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.quick-contact-form {
+    margin-top: 20px;
+}
+
+.quick-contact-form input[type="text"],
+.quick-contact-form input[type="email"],
+.quick-contact-form textarea {
+    width: calc(100% - 20px); 
+    max-width: 280px; 
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    display: block; 
+	margin: 0 auto;
+}
+
+.quick-contact-form textarea {
+    height: 120px; 
+}
+
+.quick-contact-form button {
+    width: 100px; 
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.quick-contact-form button:hover {
+    background-color: #e64a19;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 0 10px; 
+    }
+
+    .footer-logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .company-info h3 {
+        font-size: 20px;
+    }
+
+    .quick-contact-form input[type="text"],
+    .quick-contact-form input[type="email"],
+    .quick-contact-form textarea {
+        width: calc(100% - 20px); 
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .quick-contact-form button {
+        width: calc(100% - 20px); 
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: #ff5722;
+        color: #fff;
+    }
+}
